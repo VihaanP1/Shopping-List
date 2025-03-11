@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shopping List</title>
+</head>
+<body>
+    <h2>Shopping List</h2>
+    <form method="POST">
+        <ol Type="1">
+            <li>Add an Item</li>
+            <li>Change an Item</li>
+            <li>Delete an Item</li>
+            <li>Clear Shopping List</li>
+        </ol>
+        <label for="input1">Enter your choice (1-4):</label>
+        <input type="text" name="input1" required>
+        <br><br>
+        <label for="input2">Enter your item number:</label>
+        <input type="text" name="input2" required>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3>Current Shopping List:</h3>
+    <ol>
+        {% for item in shopping_list %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ol>
+</body>
+</html>
+
+
